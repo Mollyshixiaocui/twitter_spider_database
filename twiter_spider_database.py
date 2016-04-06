@@ -29,8 +29,9 @@ while True:
             twitterID = cur.fetchone()[0]
         except:
             print "No unretrieved twitter ID"
-            continue #NO NEW TEITTER ID
-#read the twitter data using API ???what data
+            continue #NO NEW Twitter ID
+
+#read the twitter data using API 
 url = twurl.augment(twitter_url, {'screen_name':twitterID, 'count':'20'})
 print "retrieving url", url
 connection = urllib.urlopen(url)
